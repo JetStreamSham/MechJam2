@@ -3,5 +3,8 @@
 All rights reserved.
 
 Programming - JetStreamSham
-Music & SFX - [https://soundcloud.com/arehartsounds] arehartsounds 
+
+Music & SFX - arehartsounds
+
 Models & Art - BarioIDL
+
