@@ -20,18 +20,33 @@ public class SniperMechMachine : MonoBehaviour
     void Update()
     {
         Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (Input.GetButtonUp("Fire1"))
+            animator.SetTrigger("shoot");
 
-        animator.SetBool("isWalking", Mathf.Abs(input.z) > 0.001f);
-        animator.SetBool("isRotating", Mathf.Abs(input.x) > 0.001f);
-        animator.SetFloat("horizontal", input.x);
-        animator.SetFloat("vertical", input.z);
-        //input = transform.rotation * input;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            animator.SetBool("isWalking", Mathf.Abs(input.z) > 0.001f || Mathf.Abs(input.x) > 0.001f);
+            animator.SetFloat("horizontal", input.x);
+            animator.SetFloat("vertical", input.z);
+            input = transform.rotation * input;
+            transform.Translate(input * walkSpeed * Time.deltaTime, Space.World);
 
-        transform.Rotate(input.x * transform.up, angularSpeed * Time.deltaTime);
-        Vector3 velocity = (transform.forward * input.z * walkSpeed * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("isWalking", Mathf.Abs(input.z) > 0.001f);
+            animator.SetBool("isRotating", Mathf.Abs(input.x) > 0.001f);
+            animator.SetFloat("horizontal", input.x);
+            animator.SetFloat("vertical", input.z);
+            //input = transform.rotation * input;
 
-        Debug.Log($"{velocity}");
 
-        transform.Translate(transform.forward * input.z * walkSpeed * Time.deltaTime,Space.World);
+            transform.Rotate(input.x * transform.up, angularSpeed * Time.deltaTime);
+            Vector3 velocity = (transform.forward * input.z * walkSpeed * Time.deltaTime);
+
+            Debug.Log($"{velocity}");
+
+            transform.Translate(transform.forward * input.z * walkSpeed * Time.deltaTime, Space.World);
+        }
     }
 }
