@@ -18,7 +18,7 @@ public class FreeCam : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
         currentSpeed = defaultSpeed;
     }
 
@@ -58,7 +58,7 @@ public class FreeCam : MonoBehaviour
 
         motionVector = transform.rotation * inputVector;
 
-        motionVector *= currentSpeed;
+        motionVector *= currentSpeed * Time.deltaTime;
         //Debug.Log($"Motion Vector{motionVector}");
         transform.position += motionVector;
 

@@ -8,4 +8,176 @@ AvatarMask:
   m_PrefabAsset: {fileID: 0}
   m_Name: Shoot
   m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-  m_Elements: []
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: bullet
+    m_Weight: 0
+  - m_Path: sniper
+    m_Weight: 0
+  - m_Path: sniper/root.004
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet/Cube.012
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet/feet_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.001
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.001/Cube.013
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.001/feet.001_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.002
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.002/Cube.014
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.002/feet.002_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.003
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.003/Cube.015
+    m_Weight: 0
+  - m_Path: sniper/root.004/feet.003/feet.003_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main
+    m_Weight: 1
+  - m_Path: sniper/root.004/main/base
+    m_Weight: 1
+  - m_Path: sniper/root.004/main/Cube.033
+    m_Weight: 1
+  - m_Path: sniper/root.004/main/mount
+    m_Weight: 1
+  - m_Path: sniper/root.004/main/mount/Cube.032
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/mount/mount_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/Cube.001
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/Cube.004
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/tip
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/tip/Cube.008
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/tip/pis.003
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/tip/pis.003/Cube.021
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/tip/pis.003/ton.003
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/tip/pis.003/ton.003/Cube.024
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/mid leg/tip/pis.003/ton.003/ton.003_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/root.005
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/root.005/Cube.029
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/root.005/root.009
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/root.005/root.009/Cube.030
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root/root.005/root.009/root.009_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/Cube.002
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/Cube.005
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/tip.001
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/tip.001/Cube.009
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/tip.001/pis.002
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/tip.001/pis.002/Cube.020
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/tip.001/pis.002/ton.002
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/tip.001/pis.002/ton.002/Cube.023
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/mid leg.001/tip.001/pis.002/ton.002/ton.002_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/root.006
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/root.006/Cube.016
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/root.006/root.010
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/root.006/root.010/Cube.031
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.001/root.006/root.010/root.010_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/Cube.003
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/Cube.006
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/tip.002
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/tip.002/Cube.010
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/tip.002/pis.001
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/tip.002/pis.001/Cube.019
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/tip.002/pis.001/ton.001
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/tip.002/pis.001/ton.001/Cube.022
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/mid leg.002/tip.002/pis.001/ton.001/ton.001_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/root.007
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/root.007/Cube.025
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/root.007/root.011
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/root.007/root.011/Cube.026
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.002/root.007/root.011/root.011_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/Cube
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/Cube.007
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/tip.003
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/tip.003/Cube.011
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/tip.003/pis
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/tip.003/pis/Cube.017
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/tip.003/pis/ton
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/tip.003/pis/ton/Cube.018
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/mid leg.003/tip.003/pis/ton/ton_end
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/root.008
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/root.008/Cube.027
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/root.008/root.012
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/root.008/root.012/Cube.028
+    m_Weight: 0
+  - m_Path: sniper/root.004/main/root.003/root.008/root.012/root.012_end
+    m_Weight: 0

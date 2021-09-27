@@ -34,14 +34,35 @@ public class SniperAI : MonoBehaviour
 
     public SNIPER_STATE state;
 
-    public float walkSpeed = 1f;
-    public float angularSpeed = 1f;
-    // Start is called before the first frame update
+
     void Start()
     {
+        NavMeshHit navHit;
+        bool result1 = NavMesh.SamplePosition(transform.position, out navHit, 10f, NavMesh.AllAreas);
 
+        bool result2 = navHit.hit;
+
+        agent.radius += 1;
+        agent.radius -= 1;
+
+        if (navHit.hit)
+            agent.Warp(navHit.position);
+
+        //Debug.Log(result1 + " " + result2);
+
+        Debug.DrawLine(transform.position, transform.position + Vector3.up * 50, Color.blue, 100f);
+        Debug.DrawLine(transform.position, transform.position + Vector3.forward * 50, Color.red, 100f);
     }
 
+
+    void EscortDestination()
+    {
+        Vector3 escortLocation = player.transform.position;
+        escortLocation += 50f * Random.insideUnitSphere;
+
+
+        agent.SetDestination(escortLocation);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -50,13 +71,27 @@ public class SniperAI : MonoBehaviour
         {
             case SNIPER_STATE.ESCORT:
                 {
-                    if(target != player)
+
+                    //enemy within firing range;
+                    if (false)
                     {
-                        target = player;
-                        Vector3 escortLocation = target.transform.position;
-                        escortLocation += 50f * Random.insideUnitSphere;
-                        agent.SetDestination(escortLocation);
+
                     }
+                    // Get within escort distance
+                    else if ((agent.destination - player.position).sqrMagnitude > 50f)
+                    {
+                        EscortDestination();
+
+                    }
+                    float sqrDist = (agent.nextPosition - agent.destination).sqrMagnitude;
+                    if (sqrDist <= agent.stoppingDistance * agent.stoppingDistance)
+                    {
+                        EscortDestination();
+                    }
+
+
+
+                    Debug.DrawLine(agent.destination, agent.destination + Vector3.up * 50, Color.blue, 100f);
                     break;
                 }
             case SNIPER_STATE.COMBAT:
@@ -70,14 +105,13 @@ public class SniperAI : MonoBehaviour
         }
 
 
-        Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 input = transform.InverseTransformDirection(agent.velocity.normalized);
 
-        animator.SetBool("isWalking", Mathf.Abs(input.z) > 0.001f);
-        animator.SetBool("isRotating", Mathf.Abs(input.x) > 0.001f);
+        animator.SetBool("isWalking", Mathf.Abs(input.x) > 0 || Mathf.Abs(input.z) > 0);
         animator.SetFloat("horizontal", input.x);
         animator.SetFloat("vertical", input.z);
 
-
+        Debug.DrawLine(transform.position, transform.position + input * 50, Color.red);
 
     }
 }
