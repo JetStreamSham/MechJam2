@@ -30,9 +30,24 @@ public class SniperAI : MonoBehaviour
     public Animator animator;
 
     public Transform player;
-    public Transform target;
+    public Transform home;
+
+    public Enemy target;
 
     public SNIPER_STATE state;
+
+    public Transform barrel;
+    public GameObject bullet;
+
+    public float health = 100;
+
+    public float shootTime;
+    public float currentShootTime;
+
+
+    public bool canReachTarget = false;
+    
+    public ParticleSystem explode;
 
 
     void Start()
@@ -58,60 +73,206 @@ public class SniperAI : MonoBehaviour
     void EscortDestination()
     {
         Vector3 escortLocation = player.transform.position;
-        escortLocation += 50f * Random.insideUnitSphere;
+        Vector3 randomLoc = Random.onUnitSphere;
+        randomLoc.y = 0;
+        escortLocation += 50f * randomLoc.normalized;
 
 
         agent.SetDestination(escortLocation);
+        Debug.DrawLine(agent.destination, agent.destination + Vector3.up * 50, Color.blue, 100f);
+    }
+
+    bool CombatDestination()
+    {
+        Vector3 escortLocation = target.transform.position;
+        Vector3 dir = transform.position - target.transform.position;
+
+        dir.y = 0;
+        escortLocation += 150f * dir.normalized;
+
+
+        Debug.DrawLine(agent.destination, agent.destination + Vector3.up * 50, Color.blue, 100f);
+        return agent.SetDestination(escortLocation);
+    }
+
+
+    public Enemy GetNearestEnemy()
+    {
+        if (Enemy.enemyList == null)
+            return null;
+        Enemy closest = null;
+        foreach (Enemy e in Enemy.enemyList)
+        {
+
+            if (closest == null)
+                closest = e;
+
+            if ((e.transform.position - transform.position).sqrMagnitude < (closest.transform.position - transform.position).sqrMagnitude)
+            {
+                closest = e;
+            }
+        }
+
+        return closest;
+    }
+
+
+    public bool WithinRange(Vector3 position, Vector3 position2, float range)
+    {
+
+        return (position - position2).magnitude <= range;
+
     }
     // Update is called once per frame
     void Update()
     {
-
-        switch (state)
+        Debug.DrawLine(agent.destination, agent.destination + Vector3.up * 50, Color.red, 100f);
+        currentShootTime -= Time.deltaTime;
+        if (health > 0)
         {
-            case SNIPER_STATE.ESCORT:
-                {
-
-                    //enemy within firing range;
-                    if (false)
+            switch (state)
+            {
+                case SNIPER_STATE.ESCORT:
                     {
+                        //enemy within firing range;
 
+                        if (target == null)
+                            target = GetNearestEnemy();
+                        else if (target.currentHealth <= 0)
+                            target = null;
+                        if (target != null)
+                            if (WithinRange(target.transform.position, transform.position, 60f))
+                            {
+                                barrel.LookAt(target.transform);
+                                if (currentShootTime <= 0)
+                                {
+                                    currentShootTime = shootTime;
+
+                                    //shoot em
+                                    GameObject instancedBullet = GameObject.Instantiate(bullet);
+                                    instancedBullet.name = gameObject.name + " Bullet";
+                                    instancedBullet.tag = "playerAI";
+                                    instancedBullet.transform.position = barrel.position + barrel.forward;
+
+                                    Rigidbody bulletBody = instancedBullet.GetComponent<Rigidbody>();
+
+                                    bulletBody.AddForce(barrel.forward * 50000f);
+                                    Destroy(instancedBullet, 100);
+
+                                }
+
+
+
+                            }
+                        // Get within escort distance
+                        if (!WithinRange(player.position, transform.position, 49f))
+                        {
+                            EscortDestination();
+                        }
+
+                        break;
                     }
-                    // Get within escort distance
-                    else if ((agent.destination - player.position).sqrMagnitude > 50f)
+                case SNIPER_STATE.COMBAT:
                     {
-                        EscortDestination();
+                        //enemy within firing range;
 
+                        if (target == null)
+                            target = GetNearestEnemy();
+                        else if (target.currentHealth <= 0)
+                            target = null;
+
+
+                        if (target != null)
+                        {
+
+                            //get within safe firing range
+                            if (!canReachTarget)
+                                canReachTarget = CombatDestination();
+
+                            //can fire
+                            bool inRange = (WithinRange(target.transform.position, transform.position, 200f));
+                            Debug.DrawLine(target.transform.position, target.transform.position + 200 * -(target.transform.position - transform.position).normalized, Color.green);
+                            Debug.Log(inRange);
+                            if (inRange)
+                            {
+                                barrel.LookAt(target.transform);
+                                if (currentShootTime <= 0)
+                                {
+                                    currentShootTime = shootTime;
+
+                                    //shoot em
+                                    GameObject instancedBullet = GameObject.Instantiate(bullet);
+                                    instancedBullet.tag = "playerAI";
+                                    instancedBullet.transform.position = barrel.position + barrel.forward;
+
+                                    Rigidbody bulletBody = instancedBullet.GetComponent<Rigidbody>();
+
+                                    bulletBody.AddForce(barrel.forward * 50000f);
+                                    Destroy(instancedBullet, 100);
+
+                                }
+                                Debug.Log("aFIRE");
+                            }
+                            else
+                            {
+
+                                Debug.Log("RFIRE");
+                            }
+                        }
+
+                        break;
                     }
-                    float sqrDist = (agent.nextPosition - agent.destination).sqrMagnitude;
-                    if (sqrDist <= agent.stoppingDistance * agent.stoppingDistance)
+                case SNIPER_STATE.RETREAT:
                     {
-                        EscortDestination();
+                        agent.SetDestination(home.position);
+                        break;
                     }
+            }
 
 
+            Vector3 input = transform.InverseTransformDirection(agent.velocity.normalized);
 
-                    Debug.DrawLine(agent.destination, agent.destination + Vector3.up * 50, Color.blue, 100f);
-                    break;
-                }
-            case SNIPER_STATE.COMBAT:
-                {
-                    break;
-                }
-            case SNIPER_STATE.RETREAT:
-                {
-                    break;
-                }
+            if (canReachTarget)
+            {
+                animator.SetBool("isWalking", Mathf.Abs(input.x) > 0 || Mathf.Abs(input.z) > 0);
+                animator.SetFloat("horizontal", input.x);
+                animator.SetFloat("vertical", input.z);
+            }
+            else
+            {
+                animator.SetBool("isWalking", false);
+                animator.SetFloat("horizontal", 0);
+                animator.SetFloat("vertical", 0);
+            }
+
+
+            Debug.DrawLine(transform.position, transform.position + input * 50, Color.red);
+        } else
+        {
+            Explode();
         }
 
 
-        Vector3 input = transform.InverseTransformDirection(agent.velocity.normalized);
+    }
 
-        animator.SetBool("isWalking", Mathf.Abs(input.x) > 0 || Mathf.Abs(input.z) > 0);
-        animator.SetFloat("horizontal", input.x);
-        animator.SetFloat("vertical", input.z);
+    void Explode()
+    {
+        GameObject.Instantiate(explode, transform);
+        Destroy(gameObject, explode.main.duration * .5f);
+        
+    }
 
-        Debug.DrawLine(transform.position, transform.position + input * 50, Color.red);
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log($"Caller:{gameObject.name} Collider: {other.name}");
+        if (other.tag == "enemy")
+        {
+            health -= 10;
+        }
+    }
+    private void LateUpdate()
+    {
 
     }
 }
