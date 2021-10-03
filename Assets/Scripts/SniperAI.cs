@@ -25,6 +25,8 @@ public enum SNIPER_STATE
 [RequireComponent(typeof(NavMeshAgent))]
 public class SniperAI : MonoBehaviour
 {
+    public static List<SniperAI> sniperList;
+
     public NavMeshAgent agent;
     public Rigidbody rigidbody;
     public Animator animator;
@@ -46,12 +48,28 @@ public class SniperAI : MonoBehaviour
 
 
     public bool canReachTarget = false;
-    
-    public ParticleSystem explode;
 
+    public GameObject explode;
+
+
+    private void Awake()
+    {
+        if (sniperList == null)
+        {
+            sniperList = new List<SniperAI>();
+        }
+
+        if (!sniperList.Contains(this))
+        {
+            sniperList.Add(this);
+        }
+    }
 
     void Start()
     {
+        PlayerController p = FindObjectOfType<PlayerController>();
+        if (p)
+            player = p.transform;
         NavMeshHit navHit;
         bool result1 = NavMesh.SamplePosition(transform.position, out navHit, 10f, NavMesh.AllAreas);
 
@@ -126,6 +144,15 @@ public class SniperAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            PlayerController p = FindObjectOfType<PlayerController>();
+            if (p)
+                player = p.transform;
+        }
+
+        if (Input.GetKey(KeyCode.L))
+            Explode();
         Debug.DrawLine(agent.destination, agent.destination + Vector3.up * 50, Color.red, 100f);
         currentShootTime -= Time.deltaTime;
         if (health > 0)
@@ -165,7 +192,11 @@ public class SniperAI : MonoBehaviour
 
                             }
                         // Get within escort distance
-                        if (!WithinRange(player.position, transform.position, 49f))
+                        if (WithinRange(player.position, transform.position, 55f))
+                        {
+                            agent.ResetPath();
+                        }
+                        else
                         {
                             EscortDestination();
                         }
@@ -192,7 +223,6 @@ public class SniperAI : MonoBehaviour
                             //can fire
                             bool inRange = (WithinRange(target.transform.position, transform.position, 200f));
                             Debug.DrawLine(target.transform.position, target.transform.position + 200 * -(target.transform.position - transform.position).normalized, Color.green);
-                            Debug.Log(inRange);
                             if (inRange)
                             {
                                 barrel.LookAt(target.transform);
@@ -247,7 +277,8 @@ public class SniperAI : MonoBehaviour
 
 
             Debug.DrawLine(transform.position, transform.position + input * 50, Color.red);
-        } else
+        }
+        else
         {
             Explode();
         }
@@ -257,9 +288,13 @@ public class SniperAI : MonoBehaviour
 
     void Explode()
     {
-        GameObject.Instantiate(explode, transform);
-        Destroy(gameObject, explode.main.duration * .5f);
-        
+        GameObject a = GameObject.Instantiate(explode, transform.position + Vector3.up * 10, transform.rotation);
+        a.transform.localScale *= 10f;
+        // Debug.Break();
+        Destroy(a, 5f);
+        sniperList.Remove(this);
+        Destroy(gameObject);
+
     }
 
 

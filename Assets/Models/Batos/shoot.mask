@@ -1,0 +1,445 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: shoot
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: batOS
+    m_Weight: 0
+  - m_Path: batOS/Bone
+    m_Weight: 0
+  - m_Path: batOS/Bone/1
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/2
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/batos.041
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.008
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.008/batos.142
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.008/fingers.009
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.008/fingers.009/batos.143
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.008/fingers.009/fingers.010
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.008/fingers.009/fingers.010/batos.144
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.008/fingers.009/fingers.010/fingers.010_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.011
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.011/batos.146
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.011/fingers.012
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.011/fingers.012/batos.147
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.011/fingers.012/fingers.012_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.013
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.013/batos.141
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.013/fingers.014
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.013/fingers.014/batos.140
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.013/fingers.014/fingers.015
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.013/fingers.014/fingers.015/batos.145
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/a b l.001/fingers.013/fingers.014/fingers.015/fingers.015_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/batos.130
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/a b l/batos.130/batos.088
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/batos.129
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/batos.129/batos.125
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/batos.129/batos.125/batos.126
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/batos.129/batos.127
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/a t l.001/batos.129/batos.127/batos.128
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124/batos.117
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124/batos.118
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124/batos.119
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124/batos.119/batos.120
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124/batos.121
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124/batos.121/batos.122
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.124/batos.123
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.132
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.132/batos.016
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t l/batos.132/batos.131
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/batos.040
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers/batos.090
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers/fingers.003
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers/fingers.003/batos.133
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers/fingers.003/fingers.004
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers/fingers.003/fingers.004/batos.134
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers/fingers.003/fingers.004/fingers.004_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.001
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.001/batos.135
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.001/fingers.005
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.001/fingers.005/batos.137
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.001/fingers.005/fingers.005_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.002
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.002/batos.136
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.002/fingers.006
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.002/fingers.006/batos.138
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.002/fingers.006/fingers.007
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.002/fingers.006/fingers.007/batos.139
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/fingers.002/fingers.006/fingers.007/fingers.007_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/ak
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/ak/ak.001
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Cube.036
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Cube.041
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Cube.053
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Cube.053/Cube.034
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Cube.079
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Cube.079/Cube.035
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Cylinder.011
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Plane.005
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/Plane.005/Plane.002
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/shotgun
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/shotgun/slider
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/staff weapon
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/weapon_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/a b r.001/weapon/weaponhold
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/batos.109
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/a b r/batos.109/batos.089
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/batos.108
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/batos.108/batos.104
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/batos.108/batos.104/batos.105
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/batos.108/batos.106
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/a t r.001/batos.108/batos.106/batos.107
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103/batos.096
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103/batos.097
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103/batos.098
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103/batos.098/batos.099
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103/batos.100
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103/batos.100/batos.101
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.103/batos.102
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.111
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.111/batos
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/a t r/batos.111/batos.110
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.028
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.028/batos.064
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.028/batos.067
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.095
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.095/batos.091
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.095/batos.091/batos.092
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.095/batos.093
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.095/batos.093/batos.094
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.116
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.116/batos.112
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.116/batos.112/batos.113
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.116/batos.114
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/batos.116/batos.114/batos.115
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/neck
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/neck/head
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/neck/head/head_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/shoulder
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/3/shoulder/shoulder_end
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/2/batos.027
+    m_Weight: 1
+  - m_Path: batOS/Bone/1/batos.017
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.011
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.011/batos.010
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.011/batos.012
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.011/batos.013
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.011/batos.015
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.071
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.071/batos.050
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.072
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.017/batos.072/batos.061
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.070
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.070/batos.063
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.073
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.073/batos.066
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/batos.087
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.023
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.023/batos.029
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.039
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.039/batos.055
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.039/batos.059
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.039/batos.060
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.039/batos.081
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/batos.039/batos.081/batos.080
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/batos.025
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/batos.025/batos.056
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/batos.025/batos.056/batos.057
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/batos.025/batos.058
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/batos.025/batos.058/batos.062
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/batos.021
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/batos.021/batos.077
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/batos.021/batos.077/batos.078
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/batos.037
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/batos.037/batos.054
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/l b l.001
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/l b l.001/batos.018
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/l b l.001/batos.018/batos.036
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/l b l.001/batos.018/batos.036/batos.034
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t l/l t l.001/l b l/l b l.001/l b l.001_end
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/batos.022
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/batos.022/batos.026
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/batos.038
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/batos.038/batos.043
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/batos.048
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/batos.049
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/batos.024
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/batos.024/batos.044
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/batos.024/batos.044/batos.045
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/batos.024/batos.046
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/batos.024/batos.046/batos.051
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/batos.020
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/batos.020/batos.031
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/batos.020/batos.031/batos.032
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/batos.053
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/batos.053/batos.042
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/r b l.001
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/r b l.001/batos.019
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/r b l.001/batos.019/batos.035
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/r b l.001/batos.019/batos.035/batos.033
+    m_Weight: 0
+  - m_Path: batOS/Bone/1/l t r/l t r.001/r b l/r b l.001/r b l.001_end
+    m_Weight: 0
+  - m_Path: batOS/Bone/h l.002
+    m_Weight: 0
+  - m_Path: batOS/Bone/h l.002/a l
+    m_Weight: 0
+  - m_Path: batOS/Bone/h l.002/a l/a l_end
+    m_Weight: 0
+  - m_Path: batOS/Bone/h r.002
+    m_Weight: 0
+  - m_Path: batOS/Bone/h r.002/a r
+    m_Weight: 0
+  - m_Path: batOS/Bone/h r.002/a r/a r_end
+    m_Weight: 0
+  - m_Path: batOS/Bone/l l
+    m_Weight: 0
+  - m_Path: batOS/Bone/l l/l l_end
+    m_Weight: 0
+  - m_Path: batOS/Bone/l r
+    m_Weight: 0
+  - m_Path: batOS/Bone/l r/l r_end
+    m_Weight: 0
+  - m_Path: batos.069
+    m_Weight: 0
+  - m_Path: batos.069/batos.068
+    m_Weight: 0
+  - m_Path: batos.074
+    m_Weight: 0
+  - m_Path: batos.074/batos.065
+    m_Weight: 0
+  - m_Path: batos.075
+    m_Weight: 0
+  - m_Path: batos.075/batos.047
+    m_Weight: 0
+  - m_Path: batos.076
+    m_Weight: 0
+  - m_Path: batos.076/batos.086
+    m_Weight: 0
+  - m_Path: batos.079
+    m_Weight: 0
+  - m_Path: batos.079/batos.052
+    m_Weight: 0
+  - m_Path: batos.079/batos.052/batos.003
+    m_Weight: 0
+  - m_Path: batos.083
+    m_Weight: 0
+  - m_Path: batos.083/batos.082
+    m_Weight: 0
+  - m_Path: batos.085
+    m_Weight: 0
+  - m_Path: batos.085/batos.084
+    m_Weight: 0
+  - m_Path: batos.085/batos.084/batos.002
+    m_Weight: 0
