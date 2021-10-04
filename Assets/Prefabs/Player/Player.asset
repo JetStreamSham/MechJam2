@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   sensitivty: 5
-  yMaxAngle: 0
+  yMaxAngle: 20
