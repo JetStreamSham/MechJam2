@@ -169,12 +169,14 @@ public class SniperAI : MonoBehaviour
                     {
                         //enemy within firing range;
 
-                        if (target == null)
-                            target = GetRandomEnemy();
-                        else if (target.currentHealth <= 0)
+                        target = GetNearestEnemy();
+                        if (target.currentHealth <= 0)
                             target = null;
                         if (target != null)
-                            if (WithinRange(target.transform.position, transform.position, 60f))
+                        {
+                            bool inRange = (WithinRange(target.transform.position, transform.position, 200f));
+                            Debug.DrawLine(target.transform.position, target.transform.position + 200 * -(target.transform.position - transform.position).normalized, Color.green);
+                            if (inRange)
                             {
                                 barrel.LookAt(target.transform);
                                 if (currentShootTime <= 0)
@@ -183,22 +185,22 @@ public class SniperAI : MonoBehaviour
 
                                     //shoot em
                                     GameObject instancedBullet = GameObject.Instantiate(bullet);
-                                    instancedBullet.name = gameObject.name + " Bullet";
                                     instancedBullet.tag = "playerAI";
                                     instancedBullet.transform.position = barrel.position + barrel.forward;
 
                                     Rigidbody bulletBody = instancedBullet.GetComponent<Rigidbody>();
 
-                                    bulletBody.AddForce(barrel.forward * 50000f);
-                                    Destroy(instancedBullet, 100);
+                                    Vector3 dir = (target.transform.position + target.transform.up) - barrel.transform.position;
+                                    instancedBullet.GetComponent<Bullet>().damage = 20;
+
+                                    bulletBody.AddForce(dir.normalized * 25000f);
+                                    Destroy(instancedBullet, 25);
 
                                 }
-
-
-
                             }
+                        }
                         // Get within escort distance
-                        if (WithinRange(player.position, transform.position, 55f))
+                        if (WithinRange(player.position, transform.position, 65f))
                         {
                             agent.ResetPath();
                         }
@@ -222,7 +224,7 @@ public class SniperAI : MonoBehaviour
                         if (target != null)
                         {
 
-                                //can fire
+                            //can fire
                             bool inRange = (WithinRange(target.transform.position, transform.position, 400f));
                             Debug.DrawLine(target.transform.position, target.transform.position + 200 * -(target.transform.position - transform.position).normalized, Color.green);
                             if (inRange)
