@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PlayMap.unity
+    guid: bf7efdd5a8a77a841846f37f58ecf497
   m_configObjects: {}
