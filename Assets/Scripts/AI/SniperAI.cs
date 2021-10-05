@@ -147,6 +147,28 @@ public class SniperAI : MonoBehaviour
         return (position - position2).magnitude <= range;
 
     }
+
+
+    void Shoot()
+    {
+        Debug.Log("Layer:" + animator.layerCount);
+        animator.Play("shoot",1);
+        currentShootTime = shootTime;
+
+        //shoot em
+        GameObject instancedBullet = GameObject.Instantiate(bullet);
+        instancedBullet.tag = "playerAI";
+        instancedBullet.transform.position = barrel.position + barrel.forward;
+
+        Rigidbody bulletBody = instancedBullet.GetComponent<Rigidbody>();
+
+        Vector3 dir = (target.transform.position + target.transform.up) - barrel.transform.position;
+        instancedBullet.GetComponent<Bullet>().damage = 20;
+
+        bulletBody.AddForce(dir.normalized * 25000f);
+        Destroy(instancedBullet, 25);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -181,21 +203,7 @@ public class SniperAI : MonoBehaviour
                                 barrel.LookAt(target.transform);
                                 if (currentShootTime <= 0)
                                 {
-                                    currentShootTime = shootTime;
-
-                                    //shoot em
-                                    GameObject instancedBullet = GameObject.Instantiate(bullet);
-                                    instancedBullet.tag = "playerAI";
-                                    instancedBullet.transform.position = barrel.position + barrel.forward;
-
-                                    Rigidbody bulletBody = instancedBullet.GetComponent<Rigidbody>();
-
-                                    Vector3 dir = (target.transform.position + target.transform.up) - barrel.transform.position;
-                                    instancedBullet.GetComponent<Bullet>().damage = 20;
-
-                                    bulletBody.AddForce(dir.normalized * 25000f);
-                                    Destroy(instancedBullet, 25);
-
+                                    Shoot();
                                 }
                             }
                         }
@@ -232,21 +240,7 @@ public class SniperAI : MonoBehaviour
                                 barrel.LookAt(target.transform);
                                 if (currentShootTime <= 0)
                                 {
-                                    currentShootTime = shootTime;
-
-                                    //shoot em
-                                    GameObject instancedBullet = GameObject.Instantiate(bullet);
-                                    instancedBullet.tag = "playerAI";
-                                    instancedBullet.transform.position = barrel.position + barrel.forward;
-
-                                    Rigidbody bulletBody = instancedBullet.GetComponent<Rigidbody>();
-
-                                    Vector3 dir = (target.transform.position + target.transform.up) - barrel.transform.position;
-                                    instancedBullet.GetComponent<Bullet>().damage = 20;
-
-                                    bulletBody.AddForce(dir.normalized * 25000f);
-                                    Destroy(instancedBullet, 25);
-
+                                    Shoot();
                                 }
                                 agent.ResetPath();
                             }
