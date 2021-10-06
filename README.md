@@ -6,5 +6,5 @@ Programming - JetStreamSham
 
 Music & SFX - arehartsounds
 
-Models & Art - BarioIDL
+Models - BarioIDL
 

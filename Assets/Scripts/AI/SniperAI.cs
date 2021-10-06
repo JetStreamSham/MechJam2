@@ -52,11 +52,14 @@ public class SniperAI : MonoBehaviour
     public GameObject explode;
 
 
+
     private void Awake()
     {
         if (sniperList == null)
         {
             sniperList = new List<SniperAI>();
+
+            Random.InitState(System.DateTimeOffset.Now.Millisecond);
         }
 
         if (!sniperList.Contains(this))
@@ -107,7 +110,7 @@ public class SniperAI : MonoBehaviour
         Vector3 dir = transform.position - target.transform.position;
 
         dir.y = 0;
-        escortLocation += 150f * dir.normalized;
+        escortLocation += (150f * dir.normalized) + Random.onUnitSphere;
 
 
         Debug.DrawLine(agent.destination, agent.destination + Vector3.up * 50, Color.blue);
@@ -152,7 +155,7 @@ public class SniperAI : MonoBehaviour
     void Shoot()
     {
         Debug.Log("Layer:" + animator.layerCount);
-        animator.Play("shoot",1);
+        animator.Play("shoot", 1);
         currentShootTime = shootTime;
 
         //shoot em
@@ -224,35 +227,30 @@ public class SniperAI : MonoBehaviour
                         //enemy within firing range;
 
                         if (target == null)
-                            target = GetNearestEnemy();
+                            target = GetRandomEnemy();
                         else if (target.currentHealth <= 0)
                             target = null;
 
 
                         if (target != null)
+                            CombatDestination();
+
+
+                        //can fire
+                        bool inRange = (WithinRange(target.transform.position, transform.position, 400f));
+                        Debug.DrawLine(target.transform.position, target.transform.position + 200 * -(target.transform.position - transform.position).normalized, Color.green);
+                        if (inRange)
                         {
-
-                            //can fire
-                            bool inRange = (WithinRange(target.transform.position, transform.position, 400f));
-                            Debug.DrawLine(target.transform.position, target.transform.position + 200 * -(target.transform.position - transform.position).normalized, Color.green);
-                            if (inRange)
+                            barrel.LookAt(target.transform);
+                            if (currentShootTime <= 0)
                             {
-                                barrel.LookAt(target.transform);
-                                if (currentShootTime <= 0)
-                                {
-                                    Shoot();
-                                }
-                                agent.ResetPath();
-                            }
-                            else
-                            {
-                                CombatDestination();
-
+                                Shoot();
                             }
                         }
-
                         break;
                     }
+
+
                 case SNIPER_STATE.RETREAT:
                     {
                         agent.SetDestination(home.position);

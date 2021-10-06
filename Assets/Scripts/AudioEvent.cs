@@ -35,7 +35,6 @@ public class AudioEvent : MonoBehaviour
 
         }else
         {
-            Debug.Log("heart");
             concurrentSounds = source.Length;
         }
 
@@ -47,7 +46,6 @@ public class AudioEvent : MonoBehaviour
         {
             if (!source[i].isPlaying)
             {
-                Debug.Log("oof");
                 source[i].clip = audioClips[clipID];
                 source[i].Play();
                 break;

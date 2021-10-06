@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health >= 0)
+        if (health > 0)
         {
             Vector3 input = Vector3.zero;
             input.x = Input.GetAxis("Horizontal");
@@ -86,9 +87,12 @@ public class PlayerController : MonoBehaviour
 
 
             }
-        } else
+        }
+        else
         {
+
             Explode();
+            SceneManager.LoadScene("ingamemenu", LoadSceneMode.Additive);
         }
 
 
@@ -118,6 +122,7 @@ public class PlayerController : MonoBehaviour
 
         var ray = camera.ScreenPointToRay(new Vector3(x, y, 0));
         Rigidbody bulletBody = instancedBullet.GetComponent<Rigidbody>();
+        instancedBullet.transform.forward = ray.direction;
 
         instancedBullet.GetComponent<Bullet>().damage = 1;
         bulletBody.AddForce(ray.direction * 50000f);

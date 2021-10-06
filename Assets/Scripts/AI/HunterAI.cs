@@ -68,7 +68,6 @@ public class HunterAI : Enemy
                         {
                             if (!agent.hasPath || agent.remainingDistance < agent.stoppingDistance)
                             {
-                                Debug.Log("as");
                                 SetDestination(transform.position + Random.insideUnitSphere * 50f);
                             }
                         }
@@ -131,7 +130,6 @@ public class HunterAI : Enemy
                         else
                         {
                             SetDestination(target.transform.position);
-                            Debug.Log("mastive");
                         }
 
                         break;
